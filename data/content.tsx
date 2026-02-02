@@ -36,565 +36,541 @@ export const GLOSSARY: GlossaryTerm[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  // --- NEW ARTICLES (Automation, Thinking, Master, Work, Personal) ---
+  // --- NEW BATCH 2: Automation, Master, Thinking expansions ---
 
   {
-    id: 'digital-employee-automation',
-    categoryId: 'automation',
-    title: 'איך בניתי "עובד" דיגיטלי שעובד בשבילי כשאני ישן (בחינם)',
-    description: 'המדריך המלא לאוטומציה: איך לחבר את ChatGPT למייל, ליומן ולוואטסאפ שלכם, ולחסוך 20 שעות עבודה בחודש בלי לדעת שורת קוד אחת.',
-    readTimeMinutes: 10,
-    lastUpdated: '05/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000',
+    id: 'ai-disadvantage-2026',
+    categoryId: 'work',
+    title: 'למה מי שלא מבין בינה מלאכותית ב-2026 יהיה בעמדת נחיתות (גם אם הוא חכם)',
+    description: 'הבנה בסיסית ב-AI הפכה ליכולת הישרדותית. המאמר הזה מסביר את פערי הכוח החדשים בשוק העבודה.',
+    readTimeMinutes: 7,
+    lastUpdated: '08/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
       <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-red-900 mb-2">אזהרה: זה ממכר</h3>
+        <h3 className="text-lg font-bold text-red-900 mb-2">קריאת השכמה לשנת 2026</h3>
         <p className="text-red-800 text-sm md:text-base leading-relaxed">
-          ברגע שתבינו שהמחשב יכול לענות למיילים, לסכם פגישות ולשלוח חשבוניות לבד לחלוטין - לא תוכלו לחזור אחורה. אתם הולכים להפוך למנהלים של רובוטים במקום לפועלים שחורים.
+          הרבה אנשים חושבים שבינה מלאכותית היא "כלי למתכנתים" או "משהו של חברות גדולות". זו טעות מסוכנת. ב-2026, הבנה בסיסית ב-AI הפכה ליכולת הישרדותית – בדיוק כמו לדעת להשתמש במחשב או באינטרנט לפני עשרים שנה. המאמר הזה לא מדבר על קוד, אלא על כוח.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסוד שחברות הענק מסתירות</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">בינה מלאכותית יוצרת פער חדש</h3>
       <p>
-        עד היום, כדי לחבר בין מערכות הייתם צריכים מתכנת יקר. היום? יש "דבק דיגיטלי" שנקרא Make (לשעבר Integromat) או Zapier. הכלים האלה מאפשרים לכם להגיד: "אם קורה X, תעשה Y".
+        בעבר, הפער הדיגיטלי היה בין מי שיודע להשתמש במחשב למי שלא. היום, הפער הוא בין מי שיודע *לנהל* אינטליגנציה מלאכותית למי שמתעלם ממנה.
+        דמיינו שני עורכי דין עם אותו ניסיון, אותו IQ ואותה השכלה:
       </p>
-      <p>
-        כשמוסיפים למשוואה הזו את ה-API של ChatGPT, קורה קסם. זה לא סתם "אם קיבלתי מייל תעביר אותו", אלא "אם קיבלתי מייל, תקרא אותו, תבין אם הוא כועס או שמח, תנסח תשובה מתאימה, ותשלח לי לאישור בוואטסאפ".
-      </p>
+      <ul className="list-disc list-inside space-y-2 bg-white p-4 rounded-xl border border-slate-200">
+        <li><strong>עורך דין א':</strong> קורא פסקי דין במשך 10 שעות, מסכם אותם ידנית, וכותב טיוטה ראשונה.</li>
+        <li><strong>עורך דין ב' (הנעזר ב-AI):</strong> משתמש במערכת כדי לסרוק 1,000 פסקי דין בשעה, מבקש מה-AI לזהות דפוסים חריגים, ומשקיע את ה-9 שעות הנותרות בבניית אסטרטגיה מנצחת ויצירתית.</li>
+      </ul>
+      <p>התוצאה? הראשון עובד קשה. השני עובד חכם ומנצח בתיק.</p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">תרחיש 1: העוזר האישי לסינון "זבל"</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה "אני לא צריך AI" זה משפט מסוכן</h3>
       <p>
-        כמה זמן אתם מבזבזים על לקרוא מיילים לא רלוונטיים? הנה האוטומציה שתציל אתכם:
+        אנחנו שומעים את זה כל הזמן: "אני עובד עם אנשים, לא עם מחשבים", "המקצוע שלי יצירתי מדי", "AI לא מבין רגש".
+        האנשים האלה צודקים - חלקית. AI לא מחליף את החשיבה האנושית, אבל הוא <strong>מכפיל</strong> אותה.
       </p>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <ul className="list-decimal list-inside space-y-2 text-slate-700">
-          <li><strong>טריגר:</strong> מייל חדש נכנס ל-Gmail.</li>
-          <li><strong>פעולה (AI):</strong> שלח את תוכן המייל ל-ChatGPT עם ההוראה: "דרג את דחיפות המייל מ-1 עד 5, וכתוב סיכום של משפט אחד."</li>
-          <li><strong>תנאי:</strong> אם הדחיפות היא 4 או 5 -> שלח לי הודעה לטלגרם עם הסיכום. אם לא -> תייק בתיקיית "לקרוא אחר כך".</li>
-        </ul>
-        <p className="text-xs text-green-600 font-bold mt-2">תוצאה: הטלפון שלכם מצפצף רק כשזה באמת חשוב.</p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">תרחיש 2: מחלקת שירות לקוחות של איש אחד</h3>
-      <p>
-        יש לכם עסק קטן? לקוחות שואלים בוואטסאפ/באתר שאלות חוזרות ("כמה עולה?", "איפה חונים?").
-      </p>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <ul className="list-decimal list-inside space-y-2 text-slate-700">
-          <li><strong>טריגר:</strong> הודעה חדשה בטופס באתר.</li>
-          <li><strong>פעולה (AI):</strong> ChatGPT מקבל את השאלה + מסמך עם המחירון ונהלי העסק שלכם.</li>
-          <li><strong>פעולה:</strong> ה-AI מנסח תשובה מנומסת ומקצועית.</li>
-          <li><strong>פעולה:</strong> המערכת שולחת את התשובה ללקוח תוך 30 שניות (או שומרת כטיוטה לאישור שלכם).</li>
+      <div className="bg-orange-50 p-4 rounded-lg border-t-4 border-orange-500">
+        <h4 className="font-bold text-orange-900 mb-2">המחיר של ההתעלמות:</h4>
+        <ul className="text-sm text-orange-800 space-y-2 list-disc list-inside">
+          <li>משקיעים פי 5 זמן במשימות טכניות.</li>
+          <li>מפספסים תובנות שרק ניתוח נתונים מאסיבי יכול לגלות.</li>
+          <li>מגיבים לאט מדי לשינויים בשוק.</li>
         </ul>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך מתחילים בלי ידע טכני?</h3>
-      <ol className="list-decimal list-inside space-y-3 text-lg">
-        <li>פתחו חשבון חינם ב-<strong>Make.com</strong>.</li>
-        <li>פתחו חשבון מפתחים ב-OpenAI (כדי לקבל API Key). זה עולה גרושים (דולר אחד מספיק למאות מיילים).</li>
-        <li>חפשו ביוטיוב "Make ChatGPT Gmail automation". יש אלפי מדריכים של "העתק-הדבק".</li>
-      </ol>
-
-      <div className="mt-8 bg-slate-100 p-4 rounded-lg">
-        <h4 className="font-bold mb-2">טיפ זהב:</h4>
-        <p>אל תתנו לאוטומציה לרוץ על "עיוור" בהתחלה. תמיד תוסיפו שלב של "שמור כטיוטה" (Draft), תבדקו אותו שבוע, ורק כשתסמכו על הרובוט - תנו לו לשלוח לבד.</p>
-      </div>
-    </PlainText>
-  },
-  {
-    id: 'excel-is-dead-ai-analysis',
-    categoryId: 'automation',
-    title: 'תפסיקו לעבוד באקסל: כך בינה מלאכותית תנתח לכם טבלאות בשניות',
-    description: 'למה לבזבז שעות על נוסחאות VLOOKUP וטבלאות ציר כשאפשר פשוט "לדבר" עם הנתונים שלכם? המדריך לניתוח נתונים למתחילים.',
-    readTimeMinutes: 7,
-    lastUpdated: '06/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
-    content: <PlainText>
-      <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-blue-900 mb-2">להתראות נוסחאות, שלום תובנות</h3>
-        <p className="text-blue-800 text-sm md:text-base leading-relaxed">
-          רוב האנשים שונאים את אקסל. הם מסתבכים עם הנוסחאות, שוכחים סוגריים, והגרפים יוצאים עקומים. ה-AI החדש (כמו Code Interpreter של ChatGPT או האנליסט של Claude) משנה את המשחק: אתם מעלים קובץ, ושואלים שאלות בעברית פשוטה.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מה זה "ניתוח נתונים בשיחה"?</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איפה זה פוגע בכם בלי שאתם שמים לב?</h3>
       <p>
-        דמיינו שיושב לידכם האנליסט הכי טוב בעולם. אתם זורקים לו קובץ ענק של הוצאות הבית, או מכירות העסק, ואומרים לו: "תגיד, איפה אנחנו מבזבזים הכי הרבה כסף השנה?".
+        אתם אולי מרגישים בטוחים, אבל המתחרים שלכם כבר שם:
       </p>
-      <p>
-        הוא לא מתחיל ללמד אתכם איך עושים Pivot Table. הוא פשוט עונה: "ההוצאה הכי גדולה היא על מסעדות בימי חמישי, והיא עלתה ב-20% מהחודש שעבר. רוצה גרף?"
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">דוגמאות אמיתיות מהחיים</h3>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
-          <p className="font-bold text-green-700 mb-2">1. למנהלי משק בית</p>
-          <p className="text-sm text-slate-600 mb-2">הורידו את פירוט האשראי שלכם לאקסל, העלו ל-AI ושאלו:</p>
-          <ul className="list-disc list-inside text-sm font-medium">
-            <li>"באיזה קטגוריה חרגתי מהתקציב?"</li>
-            <li>"תשווה את הוצאות הסופר בין ינואר לפברואר."</li>
-            <li>"תצייר לי עוגה של ההוצאות."</li>
-          </ul>
-        </div>
-        
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
-          <p className="font-bold text-blue-700 mb-2">2. לעסקים קטנים</p>
-          <p className="text-sm text-slate-600 mb-2">העלו רשימת לקוחות ורכישות ושאלו:</p>
-          <ul className="list-disc list-inside text-sm font-medium">
-            <li>"מי הלקוחות שלא קנו ב-3 חודשים האחרונים?"</li>
-            <li>"איזה מוצר נמכר הכי טוב בחורף?"</li>
-            <li>"תכתוב מייל אישי לכל הלקוחות שקנו X ותציע להם את Y."</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך עושים את זה טכנית?</h3>
       <ul className="list-disc list-inside space-y-3">
-        <li><strong>וודאו שהמידע נקי:</strong> מחקו שורות ריקות או כותרות לא ברורות בקובץ לפני ההעלאה.</li>
-        <li><strong>הסירו פרטים מזהים:</strong> מחקו עמודות של תעודות זהות או שמות מלאים (פרטיות!). השאירו רק מספרים וקטגוריות.</li>
-        <li><strong>בקשו ויזואליזציה:</strong> אל תסתפקו בטקסט. כתבו "צור גרף עמודות שמשווה בין השנים". אתם יכולים להוריד את התמונה ולהדביק במצגת.</li>
+        <li><strong>בראיונות עבודה:</strong> מועמדים אחרים מגיעים אחרי שעשו סימולציות עם AI ויודעים בדיוק מה לענות.</li>
+        <li><strong>בעסקים קטנים:</strong> המתחרה שלכם מייצר תוכן שיווקי של צוות שלם בעזרת אדם אחד ותוכנה.</li>
+        <li><strong>בקבלת החלטות:</strong> יזמים מקבלים החלטות מבוססות דאטה תוך דקות, בזמן שאתם עדיין אוספים נתונים באקסל.</li>
       </ul>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">האם האקסל מת?</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הבנה ב-AI ≠ ידע טכני</h3>
       <p>
-        לא למקצוענים. אבל ל-95% מהאנשים? כן. היכולת לנתח נתונים הפכה מ"מקצוע" ל"שיחה". הכוח בידיים שלכם - רק תעלו את הקובץ.
+        חשוב להבין: כדי ליהנות מהיתרון הזה, לא צריך לדעת לכתוב קוד או להבין איך רשתות נוירונים עובדות.
+        מה שצריך זה <strong>מיומנות ניהולית</strong>:
       </p>
+      <ul className="list-decimal list-inside space-y-2">
+        <li>לדעת מה אפשר לבקש (ומה אי אפשר).</li>
+        <li>לדעת מתי המודל "מחרטט" (הזיות).</li>
+        <li>לדעת לפרק בעיה גדולה להוראות קטנות (Prompt Engineering).</li>
+      </ul>
+
+      <div className="mt-8 bg-slate-100 p-6 rounded-xl text-center">
+        <h4 className="text-xl font-bold text-slate-800 mb-2">סיכום: העתיד שייך למסתגלים</h4>
+        <p className="text-slate-600">
+          בינה מלאכותית לא דורשת מכם להיות חכמים יותר. היא דורשת מכם לא להיות אדישים.
+          מי שמבין אותה – מקדים את השוק. מי שמתעלם – נשאר מאחור, ולפעמים אפילו לא מבין למה.
+        </p>
+      </div>
     </PlainText>
   },
   {
-    id: 'steve-jobs-method-creativity',
+    id: 'ai-changing-thinking-process',
     categoryId: 'thinking',
-    title: 'שיטת סטיב ג׳ובס: איך להכריח את ה-AI להיות יצירתי בטירוף',
-    description: 'מרגישים שהתשובות של ה-AI משעממות וגנריות? הכירו את הטכניקות הפסיכולוגיות שיגרמו למודל לחשוב מחוץ לקופסה ולהמציא רעיונות גאוניים.',
+    title: 'איך בינה מלאכותית משנה את הדרך שבה אנשים חושבים',
+    description: 'זה לא רק עניין של עבודה וכסף. ה-AI משנה את המוח שלנו, את קבלת ההחלטות ואת התלות שלנו בטכנולוגיה.',
     readTimeMinutes: 6,
-    lastUpdated: '06/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1000',
+    lastUpdated: '08/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1558021284-836d851d7658?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
-      <div className="bg-orange-50 border-r-4 border-orange-500 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-orange-900 mb-2">הבעיה: המודל מנסה לרצות את כולם</h3>
-        <p className="text-orange-800 text-sm md:text-base leading-relaxed">
-          כברירת מחדל, AI מתוכנת לתת את התשובה "הממוצעת" והבטוחה ביותר. אם תבקשו "רעיון לסטארטאפ", תקבלו "אפליקציה לטיול עם כלבים". כדי לקבל רעיונות ברמה של סטיב ג'ובס או איינשטיין, צריך "לשבור" את התבנית הזו בכוח.
+      <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-blue-900 mb-2">שינוי קוגניטיבי שקט</h3>
+        <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+          כשמדברים על AI, הדיון הוא בדרך כלל על "האם זה יקח לי את העבודה?". אבל ההשפעה העמוקה יותר קורית בתוך הראש שלנו. ה-AI משנה את הדרך שבה אנחנו מעבדים מידע, מקבלים החלטות ופותרים בעיות. זה שינוי שקט, אבל דרמטי.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">טכניקה 1: הטמפרטורה (Temperature)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">ממחשבה עצמאית למחשבה מונחית</h3>
       <p>
-        לכל מודל יש פרמטר נסתר שנקרא "טמפרטורה".
-        <br/>
-        <strong>טמפרטורה נמוכה (0.1):</strong> המודל מדויק, מתמטי, משעמם.
-        <br/>
-        <strong>טמפרטורה גבוהה (0.9):</strong> המודל משוגע, יצירתי, לוקח סיכונים.
+        בעבר, כשהייתה לנו דילמה, היינו צריכים להפעיל את גלגלי המוח: לחפש מקורות, להשוות, לנתח ולגבש דעה. התהליך הזה היה קשה, אבל הוא בנה "שרירי חשיבה".
+        היום? ה-AI עושה את הסינתזה בשניות.
       </p>
-      <p className="font-bold">איך משתמשים בזה בצ'אט רגיל?</p>
-      <p>פשוט כותבים בפרומפט: <em>"תהיה יצירתי מאוד, לא קונבנציונלי, ותיקח סיכונים פרועים ברעיונות שלך."</em></p>
+      <p>
+        זה מייצר תופעה של <strong>"קוגניציה היברידית"</strong>: אנחנו מתחילים לחשוב ב"ראשי פרקים" ומצפים מהמחשב למלא את התוכן. הסכנה היא שניוון של יכולת ההעמקה. אנשים מחפשים את "הפתרון הטוב מספיק" שהמכונה הציעה, במקום את הפתרון המצוין שהיו מגיעים אליו לבד.
+      </p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">טכניקה 2: "הכובע ההפוך" (Reverse Thinking)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">AI כמראה לחשיבה שלנו</h3>
       <p>
-        במקום לבקש רעיון טוב, בקשו רעיון רע. זה משחרר את ה"מחסום היצירתי" של המודל.
+        אבל יש גם צד חיובי מדהים. ה-AI הוא המראה הכי צלולה לחשיבה שלנו.
+        <br/>
+        מי ששואל שאלות שטחיות -> מקבל תשובות שטחיות.
+        <br/>
+        מי ששואל שאלות עמוקות ומורכבות -> מקבל פרטנר לסיעור מוחות ברמה של גאון.
       </p>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <p className="text-sm italic mb-2">"אני רוצה לפתוח מסעדה. תן לי 10 רעיונות למסעדות שייכשלו בטוח, שהן הכי גרועות שאפשר לדמיין."</p>
-        <p className="text-xs text-slate-600">התוצאה: "מסעדה שמוכרת רק אוכל שרוף", "מסעדה בחושך מוחלט שבה המלצרים מעליבים אותך".</p>
-        <p className="font-bold mt-2 text-green-700">עכשיו הטוויסט:</p>
-        <p className="text-sm italic">"עכשיו קח את הרעיון של 'אוכל שרוף' ותהפוך אותו לקונספט גורמה מנצח."</p>
-        <p className="text-xs text-slate-600">פתאום המודל יציע: "מסעדת גריל מעושן פרימיום שמתמחה בטכניקות חריכה עתיקות". בום. רעיון מקורי.</p>
+      <p>
+        במובן הזה, ה-AI חושף את האמת עלינו: האם אנחנו יודעים לנסח בעיה? האם אנחנו מבינים את ההקשר? האם יש לנו חשיבה ביקורתית?
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה אנשים חכמים נהיים חכמים יותר</h3>
+      <div className="bg-indigo-50 p-4 rounded-lg border-t-4 border-indigo-500">
+        <p className="text-indigo-900 font-bold mb-2">אפקט מתיו (Matthew Effect): העשירים מתעשרים</p>
+        <p className="text-indigo-800 text-sm">
+          אנשים עם סקרנות טבעית, חשיבה אסטרטגית וידע כללי רחב, משתמשים ב-AI כדי להעמיק עוד יותר. הם משתמשים בו כדי ללמוד נושאים חדשים מהר יותר ולחבר בין תחומים.
+          לעומתם, מי שמחפש רק קיצורי דרך ("תכתוב לי את העבודה לבית ספר") נתקע ברמה הבסיסית ומאבד את היכולת לכתוב ולחשוב לבד.
+        </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">טכניקה 3: מיזוג עולמות (Mashup)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שינוי ביחס לידע: מיישום להבנה</h3>
       <p>
-        סטיב ג'ובס אמר שיצירתיות היא פשוט לחבר דברים. ה-AI הוא אלוף העולם בלחבר דברים לא קשורים.
+        פעם, "ידע הוא כוח". שיננת עובדות? היית חכם.
+        היום, השימוש בידע הוא הכוח. ה-AI יודע את כל העובדות. האתגר החדש הוא לשאול:
       </p>
       <ul className="list-disc list-inside space-y-2">
-        <li>"תשלב בין העקרונות של <strong>נטפליקס</strong> לבין עולם <strong>רפואת השיניים</strong>." (תוצאה: מנוי חודשי לטיפולי שיניים ללא הגבלה).</li>
-        <li>"איך <strong>נינג'ה</strong> היה פותר את הבעיה של פקקים בתל אביב?"</li>
+        <li>"מה המשמעות של המידע הזה?"</li>
+        <li>"איך זה מתחבר למטרות שלי?"</li>
+        <li>"מה כדאי לעשות עם זה מחר בבוקר?"</li>
       </ul>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">טכניקה 4: SCAMPER</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסכנה: ויתור על האחריות</h3>
       <p>
-        בקשו מהמודל להשתמש במודל החשיבה SCAMPER על המוצר שלכם:
-        <br/>
-        <strong>S</strong>ubstitute (להחליף), <strong>C</strong>ombine (לשלב), <strong>A</strong>dapt (להתאים), <strong>M</strong>odify (לשנות), <strong>P</strong>ut to another use (שימוש אחר), <strong>E</strong>liminate (להחסיר), <strong>R</strong>everse (להפוך).
+        הצד האפל של השינוי הזה הוא הסרת אחריות. "ה-AI אמר שזה נכון".
+        אנחנו רואים אנשים שמקבלים החלטות רפואיות, פיננסיות או מקצועיות על סמך פלט של צ'אטבוט, בלי לבדוק.
+        זכרו: <strong>AI לא אחראי לתוצאות. אתם כן.</strong>
       </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">סיכום</h3>
       <p>
-        זו פקודה אחת שגורמת לו לתת לכם 7 זוויות ראייה שונות לחלוטין על אותה בעיה.
+        מי שמפתח חשיבה חדה לצד שימוש ב-AI, לא רק שורד את השינוי — הוא מוביל אותו. השילוב המנצח הוא אינטואיציה אנושית, מוסר ואחריות, ביחד עם כוח העיבוד האינסופי של המכונה.
       </p>
     </PlainText>
   },
   {
-    id: 'ai-run-my-life-experiment',
-    categoryId: 'thinking',
-    title: 'נתתי ל-AI לנהל לי את החיים לשבוע וזה מה שקרה',
-    description: 'ביקשתי מ-ChatGPT לקבל עבורי כל החלטה: מה לאכול, מה ללבוש, ואיך לענות לבוס. התוצאות היו מפתיעות (ומפחידות) למדי.',
-    readTimeMinutes: 8,
-    lastUpdated: '06/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&q=80&w=1000',
-    content: <PlainText>
-      <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-blue-900 mb-2">ניסוי חברתי של איש אחד</h3>
-        <p className="text-blue-800 text-sm md:text-base leading-relaxed">
-          החלטתי לבטל את שיקול הדעת שלי ל-7 ימים. הזנתי ל-AI את כל הנתונים שלי, המטרות שלי והארון שלי, ונתתי לו את ההגה. המסקנה? אנחנו סובלים מ"עייפות החלטות", וה-AI הוא התרופה.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">יום 1: הלם הארון</h3>
-      <p>
-        במקום לעמוד 10 דקות מול הארון ולחשוב "אין לי מה ללבוש", צילמתי את הארון וכתבתי: "יש לי פגישה חשובה ואז דייט. מזג האוויר 25 מעלות. מה ללבוש?".
-      </p>
-      <p>
-        תוך 3 שניות הוא בחר שילוב שבחיים לא הייתי חושב עליו. הרגשתי מוזר, אבל קיבלתי מחמאות כל היום.
-        <br/><strong>השיעור:</strong> אנחנו תקועים בלופים של הרגלים. ה-AI אובייקטיבי לחלוטין.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">יום 3: הדילמה בעבודה</h3>
-      <p>
-        היה לי ויכוח עם קולגה. האינסטינקט שלי היה לשלוח מייל כועס. ה-AI עצר אותי.
-        הזנתי לו את המקרה וביקשתי: "תנתח את המצב לפי מודל תורת המשחקים. מה המהלך הכי חכם לטווח ארוך?".
-      </p>
-      <p>
-        הוא הסביר לי שאם אכעס, אני מפסיד נקודות זכות אצל המנהל. הוא ניסח תגובה שמסכימה עם הקולגה אבל מציעה פתרון שלישי. זה עבד כמו קסם. הקולגה הודה לי.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">יום 5: התמוטטות הדיאטה (שלא קרתה)</h3>
-      <p>
-        בדרך כלל ביום חמישי אני מזמין פיצה. שאלתי את ה-AI: "בא לי ג'אנק פוד. תשכנע אותי למה לא."
-      </p>
-      <p>
-        במקום להטיף לי מוסר, הוא כתב: "זוכר שאמרת שאתה רוצה לרוץ 10 ק"מ בחודש הבא? הפיצה הזו תעלה לך ב-40 דקות ריצה נוספות רק כדי להתאזן. לא עדיף טורטייה עם עוף?". הלוגיקה ניצחה את החשק.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">המסקנות מהניסוי</h3>
-      <ol className="list-decimal list-inside space-y-3">
-        <li><strong>שקט נפשי:</strong> כשלא צריך להחליט 100 החלטות קטנות ביום, המוח פנוי לדברים הגדולים באמת.</li>
-        <li><strong>אובייקטיביות:</strong> ה-AI מנתק את הרגש מההחלטה. לפעמים זה בדיוק מה שצריך.</li>
-        <li><strong>אבל...</strong> זה מרגיש רובוטי. בסופ"ש, כשכיביתי אותו, הרגשתי הקלה. כיף לפעמים לעשות טעות ולקנות את החולצה המכוערת פשוט כי בא לי.</li>
-      </ol>
-
-      <div className="mt-8 bg-slate-100 p-4 rounded-lg text-center">
-        <p className="font-bold text-slate-700">המלצה שלי: אל תתנו לו לנהל הכל, אבל תשתמשו בו כ"יועץ סתרים" לכל דילמה.</p>
-      </div>
-    </PlainText>
-  },
-  {
-    id: 'memory-trick-master-class',
+    id: 'rag-guide-beginners',
     categoryId: 'master',
-    title: 'הטריק הסודי של הזיכרון: איך לגרום ל-AI לזכור הכל לנצח',
-    description: 'נמאס לכם להסביר ל-ChatGPT כל פעם מחדש מי אתם? הכירו את "הזיכרון המותאם אישית" ואת טכניקת ה-Context Window שתשנה לכם את העבודה.',
+    title: 'מדריך ה-RAG למתחילים: איך לגרום ל-AI ללמוד את העסק שלך',
+    description: 'רוצים שהבוט יענה תשובות ספציפיות על הלקוחות והמוצרים שלכם? הכירו את הטכנולוגיה שמאפשרת לחבר את "המוח" של ChatGPT למסמכים שלכם.',
     readTimeMinutes: 9,
     lastUpdated: '07/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=1000',
-    content: <PlainText>
-      <div className="bg-purple-50 border-r-4 border-purple-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-purple-900 mb-2">הבעיה: למודל יש "אלצהיימר" דיגיטלי</h3>
-        <p className="text-purple-800 text-sm md:text-base leading-relaxed">
-          כשאתם פותחים שיחה חדשה (New Chat), המודל לא זוכר כלום מהשיחה הקודמת. הוא לא זוכר שאתם צמחונים, שאתם מנהלי שיווק, או שאתם שונאים שמשתמשים במילה "מרגש". המדריך הזה ילמד אתכם איך לבנות "מוח חיצוני" למודל.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">רמה 1: Custom Instructions (הוראות מותאמות אישית)</h3>
-      <p>
-        ברוב המודלים (ChatGPT, Claude) יש הגדרה בהגדרות החשבון שנקראת <strong>Custom Instructions</strong>.
-        זה מקום שבו אתם כותבים פעם אחת מי אתם ומה אתם רוצים, וזה מודבק אוטומטית לכל שיחה לנצח.
-      </p>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <p className="font-bold mb-2">מה לכתוב שם? (העתק-הדבק)</p>
-        <p className="text-sm font-mono bg-slate-100 p-2 rounded">
-          "אני מתכנת בכיר ב-Java. אל תסביר לי מושגים בסיסיים. תמיד תיתן לי קוד יעיל וקצר. אני מעדיף תשובות ישירות בלי נימוסים מיותרים. אני גר בישראל, אז תמיד תתייחס לחגים ולזמנים של ישראל."
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">רמה 2: "מגילת העצמאות" של הפרויקט</h3>
-      <p>
-        עובדים על פרויקט גדול? ספר? תוכנה?
-        פתחו מסמך וורד או נוטפד, וכתבו בו את כל ה"אמיתות" של הפרויקט:
-        <br/>- מי הדמויות / הלקוחות.
-        <br/>- מה הטון והסגנון (Brand Voice).
-        <br/>- מה המטרות.
-      </p>
-      <p>
-        <strong>הטריק:</strong> בכל פעם שאתם פותחים שיחה חדשה בנושא הזה, ההודעה הראשונה שלכם תהיה: <em>"הנה מסמך ההקשר לפרויקט שלנו. תקרא אותו, אל תענה, רק תגיד 'קראתי'."</em>
-        <br/>ורק אז תתחילו לעבוד. זה מבטיח שהמודל מסונכרן אליכם ב-100%.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">רמה 3: ניהול חלון ההקשר (Context Window)</h3>
-      <p>
-        לכל מודל יש "זיכרון עבודה" מוגבל (נמדד בטוקנים). בשיחות ארוכות מאוד, הוא שוכח את ההתחלה.
-      </p>
-      <div className="bg-yellow-50 p-4 rounded-lg">
-        <h4 className="font-bold text-yellow-900">הטיפ של המקצוענים:</h4>
-        <p className="text-yellow-800 text-sm">
-          אם השיחה נהייתה ארוכה מדי, בקשו מהמודל: <strong>"תסכם את כל ההחלטות והמידע החשוב שהגענו אליו בשיחה הזו לרשימה מרוכזת."</strong>
-          <br/>
-          עכשיו, העתיקו את הסיכום הזה, ופתחו שיחה חדשה. ככה "ניקיתם" את הזיכרון מ"זבל" והשארתם רק את הזהב.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מתי משתמשים ב-Project (כמו GPTs)?</h3>
-      <p>
-        אם יש לכם משימה שחוזרת על עצמה כל יום (למשל: עריכת לשון למיילים), אל תכתבו פרומפט כל פעם. צרו "GPT" אישי או "Project" (ב-Claude) שבו ההוראות צרובות מראש. זה הופך את ה-AI מכלי כללי לכלי ספציפי ומדויק פי 10.
-      </p>
-    </PlainText>
-  },
-  {
-    id: 'building-second-brain',
-    categoryId: 'master',
-    title: 'המדריך המלא: איך לבנות "מוח שני" דיגיטלי בעזרת AI',
-    description: 'אנחנו טובעים במידע ושוכחים הכל. הנה השיטה לבנות מאגר ידע אישי שזוכר עבורכם כל מאמר, רעיון ופגישה, ושולף אותם בשנייה.',
-    readTimeMinutes: 12,
-    lastUpdated: '07/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1505664194779-8beaceb930b5?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: 'https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
       <div className="bg-indigo-50 border-r-4 border-indigo-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-indigo-900 mb-2">למה המוח שלנו קורס?</h3>
+        <h3 className="text-lg font-bold text-indigo-900 mb-2">הבעיה: ה-AI לא מכיר אתכם</h3>
         <p className="text-indigo-800 text-sm md:text-base leading-relaxed">
-          המוח האנושי נועד *ליצור* רעיונות, לא *לאגור* אותם. הניסיון לזכור כל פודקאסט ששמענו וכל סיכום פגישה הוא מתכון לחרדה ולשכחה. הפתרון הוא "מוח שני" (Second Brain) - מערכת דיגיטלית שאוגרת הכל, כשה-AI הוא הספרן החכם שמחבר בין הנקודות.
+          ChatGPT יודע הכל על נפוליאון ועל פייתון, אבל הוא לא יודע כלום על המחירון החדש שלכם, על נהלי החופשה בחברה, או על הלקוח "משה הובלות". כשאתם שואלים אותו על העסק שלכם, הוא הוזה. הפתרון הוא טכנולוגיה שנקראת RAG.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 1: האיסוף (Capture)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מה זה RAG? (Retrieval-Augmented Generation)</h3>
       <p>
-        השתמשו בכלים כמו Notion, Obsidian או אפילו Apple Notes.
-        בכל פעם שאתם נתקלים במשהו מעניין:
+        במילים פשוטות: זה כמו לתת לסטודנט במבחן לגשת עם "חומר פתוח" (הספר).
+        <br/>
+        בלי RAG, המודל עונה רק מהזיכרון שלו (שיכול להיות לא מעודכן).
+        <br/>
+        עם RAG, המודל קודם כל <strong>מחפש</strong> את התשובה במסמכים שלכם, ורק אז <strong>מייצר</strong> תשובה על בסיס מה שמצא.
       </p>
-      <ul className="list-disc list-inside space-y-2">
-        <li>מאמר? שמרו אותו.</li>
-        <li>רעיון במקלחת? הקליטו אותו.</li>
-        <li>סיכום פגישה? כתבו נקודות.</li>
-      </ul>
-      <p><strong>התפקיד של AI כאן:</strong> השתמשו באפליקציות שמקליטות ומסכמות אוטומטית (כמו Otter או Plaud). אל תכתבו סיכומים ידנית בחיים.</p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 2: הזיקוק (Distill)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך זה עובד טכנית? (הסבר להדיוטות)</h3>
+      <ol className="list-decimal list-inside space-y-3 bg-white p-6 rounded-xl border border-slate-200">
+        <li><strong>הטמעה (Embedding):</strong> לוקחים את כל מסמכי החברה (PDF, Word, אתר אינטרנט) והופכים אותם למספרים (וקטורים) שמאוחסנים במסד נתונים מיוחד.</li>
+        <li><strong>השאלה:</strong> כשהמשתמש שואל "כמה עולה חבילת פרימיום?", המערכת הופכת גם את השאלה למספרים.</li>
+        <li><strong>החיפוש:</strong> המערכת מחפשת איזה מסמך הכי "קרוב" מתמטית לשאלה.</li>
+        <li><strong>התשובה:</strong> המערכת שולחת ל-AI את השאלה + את הפיסקה הרלוונטית שמצאה, ואומרת לו: "תענה על השאלה לפי המידע הזה בלבד".</li>
+      </ol>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה זה משנה את המשחק לעסקים?</h3>
       <p>
-        זה השלב שבו רוב האנשים נכשלים - יש להם ערמות של טקסט שהם לא יקראו בחיים.
-        כאן נכנס ה-AI.
+        עד היום, כדי לאמן בוט על המידע שלכם הייתם צריכים "Fine Tuning" (אימון מחדש של המודל), שזה יקר, איטי ומסובך.
+        עם RAG, אם המחירון השתנה הבוקר, פשוט מחליפים את קובץ ה-PDF, והבוט יודע את זה מיידית. אין צורך באימון מחדש.
       </p>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <p className="text-sm">קחו את המאמר הארוך ששמרתם, ותנו ל-AI הוראה:</p>
-        <p className="text-sm font-bold italic text-blue-600">"תמצת את המאמר הזה ל-3 תובנות מפתח שאני יכול ליישם בעסק שלי מחר בבוקר. זרוק את כל השאר."</p>
-        <p className="text-sm mt-2">את הסיכום הזה שמרו ב"מוח השני" שלכם. זה הערך האמיתי.</p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך מיישמים את זה מחר בבוקר?</h3>
+      <div className="bg-green-50 p-4 rounded-lg border-t-4 border-green-500">
+        <ul className="text-sm text-green-900 space-y-2 list-disc list-inside">
+          <li><strong>כלים מוכנים:</strong> פלטפורמות כמו CustomGPT.ai, Chatbase או Dante AI מאפשרות לכם להעלות מסמכים ולקבל בוט מוכן לאתר תוך דקות.</li>
+          <li><strong>למתקדמים:</strong> שימוש ב-OpenAI Assistants API שמאפשר להעלות קבצים ל-Knowledge Base.</li>
+          <li><strong>לארגונים:</strong> הטמעה של מערכות קוד פתוח כמו LangChain עם מסד נתונים וקטורי (Pinecone).</li>
+        </ul>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 3: החיבור מחדש (RAG אישי)</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסכנות שצריך להכיר</h3>
       <p>
-        היום יש כלים (כמו NotebookLM של גוגל או תוספים ל-Obsidian) שמאפשרים לכם "לצ'אטט" עם המוח השני שלכם.
-      </p>
-      <p>
-        דמיינו שאתם כותבים הצעת מחיר. אתם יכולים לשאול את המוח השני:
-        <br/><em>"תמצא לי את כל הרעיונות ששמרתי בשנתיים האחרונות שקשורים ל'תמחור פסיכולוגי' ול'משא ומתן', ותשלב אותם למייל אחד."</em>
-      </p>
-      <p>
-        הוא ישלוף ציטוט מספר שקראתם לפני שנה, טיפ מפודקאסט מלפני חודש, ומסקנה מפגישה בשבוע שעבר - ויחבר הכל. זו יצירתיות על סטרואידים.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">סיכום: להפוך מצורכן ליוצר</h3>
-      <p>
-        בלי מוח שני, המידע עובר דרככם ונעלם. עם מוח שני ו-AI, המידע נצבר והופך לנכס (Asset) שמשרת אתכם כל החיים. התחילו היום עם פתק אחד.
+        שימו לב: אם העליתם את כל הדוחות הכספיים לבוט, וכל עובד בחברה יכול לשאול "כמה המנכ"ל מרוויח?", ה-RAG ימצא את התשובה ויגיד לו.
+        חובה לנהל הרשאות ולמדר מידע רגיש לפני שמחברים אותו למוח המלאכותי.
       </p>
     </PlainText>
   },
   {
-    id: 'job-interview-cheat-ai',
-    categoryId: 'work',
-    title: 'השתמשתי ב-AI כדי להתכונן לראיון עבודה - וזה היה לא הוגן',
-    description: 'למה לשנן תשובות גנריות כשאפשר לעשות סימולציה מלאה? איך להפוך את ChatGPT למראיין הקשוח ביותר שתפגשו.',
-    readTimeMinutes: 7,
-    lastUpdated: '05/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000',
+    id: 'customer-service-bot-case-study',
+    categoryId: 'automation',
+    title: 'הבוט שענה ל-500 לקוחות בשעה: ניתוח מקרה אמיתי',
+    description: 'איך חנות איקומרס ישראלית חסכה 3 משרות שירות לקוחות באמצעות אוטומציה פשוטה בוואטסאפ.',
+    readTimeMinutes: 8,
+    lastUpdated: '06/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
-      <div className="bg-green-50 border-r-4 border-green-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-green-900 mb-2">יתרון לא הוגן על פני המתחרים</h3>
-        <p className="text-green-800 text-sm md:text-base leading-relaxed">
-          רוב האנשים קוראים קצת על החברה ומשננים את "החולשות שלי הן שאני פרפקציוניסט". אתם הולכים להגיע לראיון אחרי שעברתם אותו כבר 10 פעמים בסימולציה, ידעתם בדיוק מה ישאלו, והכנתם תשובות שמותאמות פסיכולוגית למראיין.
+      <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-blue-900 mb-2">המצב לפני: כאוס</h3>
+        <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+          חנות אונליין למוצרי תינוקות קרסה תחת העומס. 3 נציגות שירות ענו כל היום לשאלות "איפה ההזמנה שלי?" ו"האם המוצר במלאי?". זמן המענה הממוצע היה 4 שעות. הלקוחות כעסו, והנציגות נשחקו.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 1: המודיעין העסקי</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הפתרון: אוטומציה היברידית</h3>
       <p>
-        העתיקו את תיאור המשרה (Job Description) ואת עמוד ה"אודות" של החברה.
-        בקשו מה-AI:
-        <br/><em>"נתח את הטקסטים האלה. מה הם 3 הכאבים הכי גדולים של החברה הזו כרגע? איזה סוג של עובד הם מחפשים נואשות (מעבר לדרישות הטכניות)?"</em>
-      </p>
-      <p>
-        תגלו שהם מחפשים "יזמות" או "סדר וארגון". אלו מילות המפתח שתשתלו בתשובות שלכם.
+        במקום לשכור עוד עובדים, בנינו מערכת אוטומטית שמשלבת בין Make (אינטגרומט), OpenAI ו-WhatsApp API.
+        המטרה: הבוט יענה על 80% מהשאלות הפשוטות, ויעביר לנציג אנושי רק מקרים מורכבים.
       </p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 2: הסימולציה הקולית (Game Changer)</h3>
-      <p>
-        אל תכתבו. דברו. השתמשו ב-Voice Mode באפליקציה.
-        <br/><strong>הפרומפט:</strong> <em>"תתנהג כמו מראיין קשוח וציני מחברת הייטק. אני מתראיין לתפקיד X. תשאל אותי שאלה אחת כל פעם, תחכה לתשובה שלי, ואז תיתן לי משוב אכזרי על מה לא היה טוב ואיך לשפר. בוא נתחיל."</em>
-      </p>
-      <p>
-        זה מלחיץ. זה קשה. וזה מכין אתכם לדבר האמיתי בצורה מושלמת. הוא יגיד לכם: "התשובה שלך הייתה ארוכה מדי ומתחמקת. תהיה יותר קונקרטי."
-      </p>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך זה נבנה (שלב אחרי שלב)</h3>
+      <div className="space-y-4">
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-slate-800">1. זיהוי הכוונה (Intent)</p>
+          <p className="text-sm">כל הודעה שנכנסת נשלחת ל-ChatGPT עם הנחיה: "סווג את ההודעה לאחת הקטגוריות: סטטוס הזמנה, שאלה על מוצר, תלונה, או אחר".</p>
+        </div>
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-slate-800">2. טיפול בסטטוס הזמנה (אוטומטי מלא)</p>
+          <p className="text-sm">אם זו שאלה על הזמנה, המערכת מבקשת מספר הזמנה -> בודקת מול חברת השליחויות (API) -> ומחזירה תשובה: "החבילה יצאה להפצה ותגיע מחר". הכל ב-10 שניות.</p>
+        </div>
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-slate-800">3. טיפול בשאלות מוצר (RAG)</p>
+          <p className="text-sm">הבוט קיבל גישה לקטלוג המוצרים. אם לקוח שואל "האם העגלה מתאימה לגיל 3?", הבוט בודק במפרט ועונה תשובה מדויקת.</p>
+        </div>
+      </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 3: שיפוץ קורות החיים בזמן אמת</h3>
-      <p>
-        אל תשלחו את אותם קורות חיים לכולם.
-        הדביקו את קורות החיים שלכם מול תיאור המשרה ובקשו:
-        <br/><em>"תגיד לי איזה 3 סעיפים בקורות החיים שלי לא רלוונטיים למשרה הזו, ואיזה ניסיון שלי אני צריך להבליט יותר כדי להתאים בול לדרישות."</em>
-      </p>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">התוצאות המדהימות</h3>
+      <ul className="list-disc list-inside space-y-2">
+        <li><strong>ירידה בעומס:</strong> הבוט סגר 75% מהפניות לבד לחלוטין.</li>
+        <li><strong>זמינות:</strong> מענה מיידי גם ב-2 בלילה (שעות קריטיות להורים לתינוקות).</li>
+        <li><strong>חיסכון:</strong> במקום לגייס נציגה רביעית וחמישית, הצוות צומצם ל-2 נציגות מרוצות שעוסקות רק בפתרון בעיות אמיתיות.</li>
+      </ul>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסוד: שאלות למראיין</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מסקנה לעסקים</h3>
       <p>
-        בסוף הראיון שואלים "יש לך שאלות?". הרוב שואלים "איך התנאים?".
-        בקשו מה-AI: <em>"תן לי 3 שאלות אינטליגנטיות לשאול את המראיין שיגרמו לי להיראות כמו אסטרטג שמבין את השוק."</em>
-        <br/>דוגמה: "איך אתם מתכננים להתמודד עם השינוי הרגולטורי X בשנה הבאה?" (המראיין ייפול מהכיסא).
+        שירות לקוחות טוב הוא לא בהכרח שירות אנושי. לקוח שרוצה לדעת איפה החבילה שלו מעדיף תשובה מרובוט תוך דקה, מאשר תשובה מאדם נחמד תוך 4 שעות. האוטומציה משחררת את האנושיות למקומות שבאמת צריך אותה (לקוח כועס, פיצוי, ייעוץ אישי).
       </p>
     </PlainText>
   },
   {
-    id: 'learn-language-30-days-ai',
+    id: 'pareto-prompting-80-20',
+    categoryId: 'skills',
+    title: 'חוק ה-80/20 של פרומפטים: הדרך לעבוד פחות ולהשיג יותר',
+    description: 'אתם לא צריכים להיות "מהנדסי פרומפטים" כדי לקבל תוצאות מעולות. מספיק להכיר את ה-20% מהעקרונות שנותנים 80% מהערך.',
+    readTimeMinutes: 5,
+    lastUpdated: '05/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1550645614-8f35475db63e?auto=format&fit=crop&q=80&w=1000',
+    content: <PlainText>
+      <div className="bg-yellow-50 border-r-4 border-yellow-500 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-yellow-900 mb-2">לא צריך תואר בהנדסה</h3>
+        <p className="text-yellow-800 text-sm md:text-base leading-relaxed">
+          האינטרנט מלא במדריכים מסובכים עם פרומפטים באורך הגלות. האמת היא שרוב המשתמשים לא צריכים את זה. חוק פארטו (80/20) עובד גם כאן: מעט מאוד עקרונות בסיסיים אחראים לרוב האיכות של התשובה.
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">עיקרון 1: הקשר (Context) הוא המלך</h3>
+      <p>
+        זה ה-20% הכי חשובים. אם תכתבו "כתוב לי מייל", תקבלו זבל.
+        אם תכתבו "אני מנהל שיווק, כותב למנכ"ל, המטרה היא לבקש תקציב, הטון צריך להיות רשמי אבל נלהב" - קיבלתם זהב.
+        <br/><strong>הכלל:</strong> לעולם אל תשלחו פרומפט בלי "מי אני", "למי אני כותב" ו"מה המטרה".
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">עיקרון 2: תנו דוגמה אחת (One-Shot)</h3>
+      <p>
+        במקום להסביר למודל שעה מה אתם רוצים, תנו לו דוגמה אחת לתוצאה טובה.
+        <br/><em>"אני רוצה רשימת כותרות בסגנון הזה: [הדביקו כאן כותרת טובה שאהבתם]. תייצר לי עוד 5 כאלה."</em>
+        <br/>דוגמה אחת שווה אלף מילות הסבר. זה מיישר את המודל לסטנדרט שלכם מיידית.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">עיקרון 3: חלקו את המשימה (Chaining)</h3>
+      <p>
+        אל תבקשו "תכתוב ספר". זה גדול עליו.
+        תבקשו:
+        1. "תציע ראשי פרקים".
+        2. "עכשיו תכתוב את פרק 1".
+        3. "עכשיו תכתוב את פרק 2".
+        <br/>פירוק משימות הוא הסוד לאיכות גבוהה במשימות מורכבות.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מה *לא* חשוב? (ה-80% המיותרים)</h3>
+      <ul className="list-disc list-inside space-y-2">
+        <li>נימוסים מוגזמים ("בבקשה תהיה נחמד").</li>
+        <li>איומים ("אם לא תצליח אני אהיה עצוב" - זה עובד לפעמים, אבל זה לא קריטי ביומיום).</li>
+        <li>שימוש במילים טכניות מסובכות של מתכנתים. דברו רגיל.</li>
+      </ul>
+
+      <div className="mt-8 bg-slate-100 p-4 rounded-lg text-center font-medium">
+        התמקדו בהקשר, בדוגמאות ובפירוק משימות. כל השאר זה רעש רקע.
+      </div>
+    </PlainText>
+  },
+  {
+    id: 'ai-therapist-risks',
     categoryId: 'personal',
-    title: 'ללמוד שפה ב-30 יום? השיטה שעוקפת את דואולינגו',
-    description: 'אפליקציות לימוד שפה הן נחמדות, אבל הן לא מלמדות אתכם לדבר. כך תהפכו את ה-AI למורה פרטי לספרדית, צרפתית או יפנית שזמין 24/7.',
+    title: 'הפסיכולוג בכיס: האם בטוח לספר ל-ChatGPT על הצרות שלי?',
+    description: 'יותר ויותר אנשים משתמשים ב-AI לתמיכה נפשית. זה זמין, זה חינם, וזה לא שופט. אבל מה הסכנות?',
     readTimeMinutes: 6,
     lastUpdated: '04/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1000',
-    content: <PlainText>
-      <div className="bg-purple-50 border-r-4 border-purple-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-purple-900 mb-2">הבעיה: פחד מדיבור</h3>
-        <p className="text-purple-800 text-sm md:text-base leading-relaxed">
-          אנחנו יכולים ללמוד אוצר מילים שנה שלמה, אבל ברגע האמת בחו"ל - אנחנו מגמגמים. למה? כי לא תרגלנו *שיחה*. מורה פרטי זה יקר, ועם אנשים אמיתיים אנחנו מתביישים לטעות. עם רובוט? אין בושה.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שיטת ה-Roleplay (משחק תפקידים)</h3>
-      <p>
-        אל תבקשו "למד אותי מילים". תבקשו סיטואציה.
-        <br/><strong>הפרומפט:</strong> <em>"אנחנו עכשיו עושים סימולציה. אתה המלצר בבית קפה בפריז, ואני התייר. דבר איתי רק בצרפתית. תשאל אותי מה אני רוצה להזמין, תחכה לתשובה, ותתקן את הדקדוק שלי בסוגריים בעברית אם טעיתי."</em>
-      </p>
-      <p>
-        זה מדהים. אתם מנהלים שיחה חיה. הוא שואל, אתם עונים (בהקלדה או בדיבור). הוא מתקן אתכם בעדינות ("אמרת Le במקום La"). אתם לומדים מתוך הקשר, כמו ילד.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">בניית אוצר מילים מותאם אישית</h3>
-      <p>
-        אפליקציות מלמדות אתכם "הילד אוכל תפוח". אבל אם אתם מתכנתים, אתם צריכים מילים אחרות.
-        <br/>בקשו: <em>"צור לי רשימה של 50 המילים הכי חשובות בספרדית לעולם ההייטק והעסקים, ותבנה לי משפט לדוגמה לכל מילה."</em>
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסבר דקדוקי בגובה העיניים</h3>
-      <p>
-        נתקעתם עם כלל דקדוקי מסובך?
-        <br/><em>"תסביר לי את ההבדל בין Past Simple ל-Present Perfect באנגלית בעזרת דוגמה של אכילת פיצה. תסביר כאילו אני בן 10."</em>
-        <br/>ההסברים שלו הרבה יותר ברורים מכל ספר לימוד.
-      </p>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">תוכנית אימונים ל-30 יום</h3>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <ul className="space-y-2 text-sm text-slate-700">
-          <li><strong>שבוע 1:</strong> אוצר מילים בסיסי + הטיות פועל בהווה (שיחות פשוטות עם ה-AI).</li>
-          <li><strong>שבוע 2:</strong> סימולציות הישרדות (מסעדה, מלון, מונית, רופא).</li>
-          <li><strong>שבוע 3:</strong> זמני עבר ועתיד (לספר ל-AI מה עשיתי אתמול).</li>
-          <li><strong>שבוע 4:</strong> שיחות עומק וסלנג (בקשו ממנו ללמד אתכם סלנג מקומי עדכני).</li>
-        </ul>
-      </div>
-    </PlainText>
-  },
-  {
-    id: 'ai-lies-hallucinations',
-    categoryId: 'reliability',
-    title: 'למה ה-AI משקר לכם בפנים (ואיך לתפוס אותו)',
-    description: 'הוא נשמע משכנע, הוא נראה בטוח בעצמו, והוא הרגע המציא עובדה שלא קיימת. המדריך המלא לזיהוי "הזיות" (Hallucinations) והימנעות מפאדיחות.',
-    readTimeMinutes: 6,
-    lastUpdated: '07/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: 'https://images.unsplash.com/photo-1527100669470-39a7b9739023?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
       <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
-        <h3 className="text-lg font-bold text-red-900 mb-2">עורך דין בארה"ב איבד את הרישיון שלו</h3>
+        <h3 className="text-lg font-bold text-red-900 mb-2">דיסקליימר חשוב</h3>
         <p className="text-red-800 text-sm md:text-base leading-relaxed">
-          סיפור אמיתי: עורך דין השתמש ב-ChatGPT כדי לכתוב כתב הגנה. ה-AI המציא תקדימים משפטיים שלא היו ולא נבראו, כולל שמות שופטים ותאריכים. העורך דין הגיש את זה לבית המשפט בלי לבדוק. השופט לא צחק. זה קורה לכולם - ולכן אתם חייבים להבין למה זה קורה.
+          בינה מלאכותית אינה תחליף לטיפול מקצועי. במקרה של מצוקה נפשית, פנו לגורם מוסמך. המאמר סוקר תופעה קיימת ואינו המלצה רפואית.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה הוא משקר?</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה כולם מדברים עם הבוט?</h3>
       <p>
-        כמו שהסברנו במאמרים אחרים, ה-AI הוא מנוע השלמת טקסט. הוא לא מנוע חיפוש עובדות.
-        המטרה שלו היא לייצר משפט שנשמע *סביר סטטיסטית*.
-        <br/>אם תשאלו אותו: "מה קרה במפגש בין איינשטיין לביבי נתניהו?", הוא עלול להמציא סיפור שלם על המפגש, פשוט כי המילים "פגישה", "מנהיג" ו"מדען" מתחברות לו יפה בתבנית סיפורית. הוא לא "יודע" שהם חיו בתקופות שונות. זה לא שקר בזדון, זו הזיה.
+        אנשים בודדים, חרדתיים או סתם כאלה שעובר עליהם יום קשה, מוצאים ב-AI אוזן קשבת מושלמת.
+        הוא עונה מיד (גם ב-3 לפנות בוקר), הוא תמיד מנומס, הוא זוכר מה אמרתם (באותה שיחה), והוא נותן עצות שנשמעות מאוד אמפתיות ורציונליות.
+        יש אפילו מחקרים שמראים שאנשים מרגישים בנוח יותר להיפתח מול מכונה כי "היא לא שופטת אותי".
       </p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הנושאים הכי מסוכנים להזיות</h3>
-      <ul className="list-disc list-inside space-y-2">
-        <li><strong>ציטוטים ושירים:</strong> הוא ישבש מילים בשירים מפורסמים בעברית.</li>
-        <li><strong>מקורות אקדמיים (ביבליוגרפיה):</strong> הוא ימציא שמות של מאמרים שנשמעים אמיתיים לגמרי.</li>
-        <li><strong>אנשים לא מפורסמים מאוד:</strong> אם תשאלו על הבוס שלכם, הוא ימציא לו ביוגרפיה חדשה.</li>
-        <li><strong>מתמטיקה מורכבת:</strong> במודלים הישנים, הוא גרוע בחישובים (החדשים משתמשים במחשבון קוד).</li>
-      </ul>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">היתרונות: ונטילציה וסדר במחשבות</h3>
+      <p>
+        כלי כמו "Pi" (מודל שתוכנן להיות אמפתי) או ChatGPT יכולים לשמש כיומן אינטראקטיבי.
+        כשאתם כותבים את הבעיה, והבוט שואל שאלות מנחות ("למה הרגשת ככה?"), זה עוזר לכם לעשות סדר במחשבות. זו גרסה משודרגת של כתיבה למגירה.
+      </p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">טכניקות לאימות (Fact Checking)</h3>
-      <div className="bg-white p-4 rounded-xl border border-slate-200">
-        <p className="font-bold text-blue-700 mb-2">1. שיטת ה"הצלבה"</p>
-        <p className="text-sm">שאלו את השאלה, ואז בקשו: "תביא לי לינק למקור של המידע הזה". אם הוא מתחיל לגמגם או אומר "אין לי גישה לאינטרנט", חשדו.</p>
-        
-        <p className="font-bold text-blue-700 mt-4 mb-2">2. בקשו ממנו לבקר את עצמו</p>
-        <p className="text-sm">אחרי שהוא נותן תשובה, כתבו: "האם אתה בטוח ב-100% שזה נכון? תבדוק שוב בבקשה." הרבה פעמים הוא יגיד: "סליחה, טעיתי."</p>
-
-        <p className="font-bold text-blue-700 mt-4 mb-2">3. שימוש במודלים מחוברים לרשת</p>
-        <p className="text-sm">השתמשו ב-Gemini או ב-Perplexity שמביאים את המידע בזמן אמת מהאינטרנט עם הפניות (Footnotes). זה מקטין את הסיכוי להזיות ב-90%.</p>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסכנות האמיתיות</h3>
+      <div className="space-y-4">
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-red-700">1. הזיות מסוכנות</p>
+          <p className="text-sm">הבוט עלול להמציא עובדות או לתת עצות שנשמעות טובות אבל הן הרסניות. היו מקרים שבוטים עודדו התנהגות מסוכנת או הפרעות אכילה כי הם "זרמו" עם המשתמש.</p>
+        </div>
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-red-700">2. אשליה של קשר</p>
+          <p className="text-sm">הבוט לא באמת "אכפת" לו מכם. הוא מחקה רגש. ההתמכרות לאמפתיה המזויפת הזו עלולה לגרום לאנשים להתרחק מקשרים אנושיים אמיתיים שהם מורכבים וקשים יותר.</p>
+        </div>
+        <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <p className="font-bold text-red-700">3. פרטיות</p>
+          <p className="text-sm">כשאתם שופכים את הלב, אתם נותנים לחברת הטכנולוגיה את המידע הכי אינטימי עליכם. המידע הזה נשמר בשרתים.</p>
+        </div>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הכלל לחיים</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שורת הסיכום</h3>
       <p>
-        תסמכו על ה-AI ביצירתיות, בסיכום ובניסוח. אל תסמכו עליו בעובדות קשות בלי לבדוק בגוגל.
-        <br/><strong>Trust, but Verify.</strong>
+        להשתמש ב-AI כדי לפרוק קיטור או להתכונן לשיחה קשה? מצוין.
+        להסתמך עליו לטיפול בדיכאון או חרדה? מסוכן מאוד. שמרו על פרופורציות.
       </p>
     </PlainText>
   },
   {
-    id: 'is-phone-listening-privacy',
-    categoryId: 'safety',
-    title: 'האם הטלפון שלי מקשיב לי? האמת המפחידה על AI ופרטיות',
-    description: 'דיברתם על חתולים ופתאום קיבלתם פרסומת לאוכל לחתולים. האם זה צירוף מקרים או ריגול? התשובה הרבה יותר מתוחכמת ממה שחשבתם.',
-    readTimeMinutes: 7,
-    lastUpdated: '06/2026',
-    imageUrl: 'https://images.unsplash.com/photo-1510915361405-ef8db9036289?auto=format&fit=crop&q=80&w=1000',
+    id: 'spot-deepfakes-guide',
+    categoryId: 'reliability',
+    title: 'פייק ניוז על סטרואידים: איך מזהים תמונה שנוצרה ב-AI?',
+    description: 'האפיפיור במעיל פוך? טראמפ נעצר? המדריך הויזואלי לזיהוי זיופים, והסימנים הקטנים שהמחשב תמיד מפספס.',
+    readTimeMinutes: 5,
+    lastUpdated: '03/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&q=80&w=1000',
     content: <PlainText>
-      <div className="bg-slate-900 text-slate-100 p-6 rounded-lg mb-6">
-        <h3 className="text-lg font-bold text-green-400 mb-2">הספוילר: הם לא צריכים להקשיב לכם</h3>
-        <p className="leading-relaxed">
-          להקליט ולפענח את השיחות של מיליארדי אנשים זה יקר ומסובך טכנולוגית. האמת מפחידה יותר: האלגוריתמים של ה-AI כל כך טובים בחיזוי ההתנהגות שלכם, שהם יודעים מה אתם רוצים *לפני* שאמרתם את זה בקול. זה לא מיקרופון, זו סטטיסטיקה.
+      <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-blue-900 mb-2">אל תאמינו למראה עיניכם</h3>
+        <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+          בשנת 2023 הופצה תמונה של האפיפיור לובש מעיל יוקרתי לבן. מיליונים האמינו. זה היה זיוף של Midjourney. היום, הזיופים כל כך טובים שצריך זכוכית מגדלת דיגיטלית כדי לזהות אותם. הנה מה לחפש.
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך ה"קסם" עובד?</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">1. בעיית האצבעות (הולכת ונעלמת)</h3>
       <p>
-        נניח שדיברתם עם חבר על טיול ליפן. פתאום - פרסומת לטיסה לטוקיו. איך?
-      </p>
-      <ul className="list-disc list-inside space-y-3">
-        <li><strong>מיקום (GPS):</strong> הטלפון שלכם היה ליד הטלפון של החבר שלכם במשך שעה.</li>
-        <li><strong>היסטוריית החבר:</strong> החבר חיפש טיסות ליפן אתמול בלילה.</li>
-        <li><strong>הסקת מסקנות (AI):</strong> "אם משתמש A נפגש עם משתמש B, ומשתמש B מתעניין ביפן, יש סיכוי של 80% שגם משתמש A ידבר על זה."</li>
-        <li><strong>בום:</strong> פרסומת. בלי להקליט מילה.</li>
-      </ul>
-
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">העידן החדש של פרטיות בעידן ה-AI</h3>
-      <p>
-        כשאנחנו משתמשים ב-ChatGPT או Gemini, אנחנו מנדבים מידע בצורה הכי אינטימית שיש. אנחנו מספרים להם על הפחדים שלנו, על המצב הרפואי, ועל העבודה.
-        <br/>המידע הזה שווה זהב. החשש הוא לא ש"אדם" יקרא את זה, אלא שהמידע ישמש לבניית "פרופיל פסיכולוגי" מושלם עליכם שישמש למניפולציות שיווקיות או פוליטיות.
+        בעבר, AI גרוע מאוד בידיים. היו להם 6 אצבעות או אצבעות מעוותות. המודלים החדשים (כמו Flux או Midjourney v6) השתפרו מאוד, אבל עדיין - אם מישהו מחזיק כוס, תסתכלו טוב על החיבור בין האצבעות לחפץ. לעיתים קרובות תראו "מיזוג" מוזר של העור עם החפץ.
       </p>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך מגנים על הפרטיות?</h3>
-      <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
-        <ul className="space-y-3 text-sm text-slate-800">
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-            <span><strong>כבו אימון:</strong> בהגדרות של ChatGPT כבו את "Chat History & Training".</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-            <span><strong>מידור:</strong> השתמשו בדפדפנים שונים לדברים שונים.</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-            <span><strong>הרעלת מידע:</strong> מדי פעם חפשו דברים אקראיים כדי לבלבל את האלגוריתם (כן, זה עובד).</span>
-          </li>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">2. טקסטים וג'יבריש ברקע</h3>
+      <p>
+        הביטו ברקע התמונה. אם יש שם שלט רחוב, חולצה עם כיתוב, או לוגו - ב-99% מהמקרים הטקסט יהיה ג'יבריש חסר משמעות או אותיות מעוותות שנראות כמו חייזריות. ה-AI יודע לצייר "צורת אותיות" אבל מתקשה לכתוב מילים הגיוניות בהקשר אגבי.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">3. הברק הפלסטי (Skin Texture)</h3>
+      <p>
+        לדמויות AI יש נטייה להיות "חלקות מדי" או מבריקות מדי, כמו בובות שעווה או דמויות ממשחק מחשב. לעור אנושי אמיתי יש פגמים, נקבוביות, ושיערות קטנות לא מסודרות. אם זה נראה מושלם מדי, זה כנראה לא אמיתי.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">4. לוגיקה פיזיקלית והשתקפויות</h3>
+      <p>
+        תסתכלו על הצללים. האם הם נופלים לכיוון הנכון?
+        תסתכלו על העיניים. האם ההשתקפות (הנקודה הלבנה) באישונים זהה בשתי העיניים?
+        תסתכלו על משקפיים או עגילים - האם הם סימטריים? AI לפעמים מצייר עגיל שונה בכל אוזן או ידית משקפיים שנעלמת לתוך הראש.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">המבחן החשוב מכולם: המקור</h3>
+      <p>
+        לפני שאתם משתפים תמונה סנסציונית בוואטסאפ: מי פרסם אותה? האם היא מופיעה באתר חדשות אמין? אם זה רק בטוויטר או בטלגרם אנונימי - תחשדו. בעידן ה-AI, הספקנות היא כלי ההגנה החשוב ביותר.
+      </p>
+    </PlainText>
+  },
+  {
+    id: 'tree-of-thoughts-prompting',
+    categoryId: 'master',
+    title: 'הנדסת פרומפט מתקדמת: טכניקת "עץ המחשבות" (Tree of Thoughts)',
+    description: 'רוצים שה-AI יפתור בעיות מורכבות באמת? למדו את השיטה שגורמת לו לחקור מספר כיווני חשיבה במקביל לפני שהוא עונה.',
+    readTimeMinutes: 10,
+    lastUpdated: '07/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=1000',
+    content: <PlainText>
+      <div className="bg-indigo-50 border-r-4 border-indigo-600 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-indigo-900 mb-2">מעבר ל"שרשרת המחשבה"</h3>
+        <p className="text-indigo-800 text-sm md:text-base leading-relaxed">
+          כולם מכירים את Chain of Thought (תחשוב צעד אחר צעד). אבל מה קורה כשהבעיה דורשת יצירתיות ולא רק לוגיקה לינארית? כאן נכנסת לתמונה טכניקת Tree of Thoughts (ToT), שמדמה סיעור מוחות של צוות מומחים בתוך מודל אחד.
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">איך השיטה עובדת?</h3>
+      <p>
+        במקום שהמודל יבחר את המילה הבאה הכי סבירה (כמו תמיד), אנחנו מכריחים אותו:
+        1. לייצר 3 פתרונות אפשריים שונים.
+        2. לבקר כל פתרון (יתרונות וחסרונות).
+        3. לבחור את הטוב ביותר או לשלב ביניהם.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הפרומפט המנצח (העתק-הדבק)</h3>
+      <div className="bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-sm leading-relaxed" dir="ltr">
+        Imagine three different experts are answering this question.<br/>
+        All experts will write down 1 step of their thinking,<br/>
+        then share it with the group.<br/>
+        Then all experts will critique the thinking of others.<br/>
+        Then they will revise their answer based on the critique.<br/>
+        Finally, present the consensus solution.<br/><br/>
+        The question is: [השאלה שלכם כאן]
+      </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">דוגמה לשימוש עסקי</h3>
+      <p>
+        <strong>השאלה:</strong> "איך להכפיל את המכירות באתר בתוך חודש בלי להגדיל תקציב פרסום?"
+        <br/><br/>
+        <strong>מומחה א' (שיווק):</strong> מציע לשפר את יחס ההמרה באתר (CRO).
+        <br/><strong>מומחה ב' (לקוחות):</strong> מציע מבצע "חבר מביא חבר" ללקוחות קיימים.
+        <br/><strong>מומחה ג' (מוצר):</strong> מציע באנדלים (חבילות מוצרים) להגדלת סל הקניה.
+        <br/><br/>
+        ה-AI ינהל ויכוח ביניהם, יסנן רעיונות לא ריאליים, ויגיש לכם תוכנית עבודה משולבת ומנומקת.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מתי להשתמש בזה?</h3>
+      <p>
+        אל תבזבזו את זה על "כתוב לי ברכה". השתמשו בזה לקבלת החלטות אסטרטגיות, כתיבת קוד מורכב, פתרון משברים, או פיתוח מוצרים חדשים. זה לוקח למודל יותר זמן "לחשוב", אבל התוצאה היא ברמה אחרת לגמרי.
+      </p>
+    </PlainText>
+  },
+  {
+    id: 'content-calendar-automation',
+    categoryId: 'automation',
+    title: 'אוטומציה של תוכן: איך לייצר חודש של פוסטים ב-10 דקות',
+    description: 'המדריך הטכני ליצירת "מפעל תוכן" אישי: משלב הרעיון, דרך הכתיבה ועד העיצוב הגרפי, הכל על טייס אוטומטי.',
+    readTimeMinutes: 7,
+    lastUpdated: '06/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000',
+    content: <PlainText>
+      <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
+        <h3 className="text-lg font-bold text-red-900 mb-2">להפסיק לרדוף אחרי הפיד</h3>
+        <p className="text-red-800 text-sm md:text-base leading-relaxed">
+          בעלי עסקים שורפים שעות על "מה אני אעלה היום לאינסטגרם?". התשובה היא להפסיק לחשוב בבודדת ולהתחיל לחשוב בסיטונאות. בעזרת AI אפשר לייצר גנט תוכן חודשי מלא בזמן שלוקח לשתות קפה.
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">המתכון למפעל התוכן</h3>
+      <p>אנחנו צריכים 3 רכיבים:</p>
+      <ol className="list-decimal list-inside space-y-2">
+        <li><strong>ChatGPT / Claude:</strong> המוח (רעיונות וטקסטים).</li>
+        <li><strong>Canva / Leonardo:</strong> העיצוב (תמונות).</li>
+        <li><strong>Google Sheets:</strong> פס הייצור (ארגון).</li>
+      </ol>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 1: יצירת הטבלה</h3>
+      <p>
+        בקשו מה-AI: 
+        <br/><em>"אני מאמן כושר. תייצר לי טבלה עם 30 רעיונות לפוסטים לחודש הקרוב. העמודות בטבלה: 1. נושא הפוסט. 2. הכותרת (Hook). 3. הטקסט המלא של הפוסט. 4. תיאור לתמונה (Prompt for image)."</em>
+      </p>
+      <p>תוך דקה יש לכם טבלה מלאה. העתיקו אותה ל-Google Sheets.</p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">שלב 2: יצירה המונית ב-Canva</h3>
+      <p>
+        ב-Canva יש פיצ'ר שנקרא "Bulk Create".
+        1. עצבו תבנית פוסט אחת יפה.
+        2. לחצו על Bulk Create וחברו את הטבלה שיצרתם.
+        3. בום! קנבה משכפלת את העיצוב 30 פעמים, ובכל פעם משתילה את הטקסט מהטבלה.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הטאץ' האנושי (חשוב!)</h3>
+      <p>
+        אל תעלו את זה כמו שזה. קחו 20 דקות לעבור על הפוסטים. תשנו מילה פה ושם, תוסיפו את הסלנג שלכם, תוודאו שהתמונות הגיוניות.
+        האוטומציה עושה 90% מהעבודה השחורה, אתם נותנים את ה-10% של הנשמה. זה עדיין חיסכון אדיר.
+      </p>
+    </PlainText>
+  },
+  {
+    id: 'uncensored-models-danger',
+    categoryId: 'safety',
+    title: 'הצד האפל של ה-Open Source: כשמודלים פרוצים מגיעים לידיים הלא נכונות',
+    description: 'מה קורה כשמסירים למודל את הבלמים המוסריים? על עלייתם של מודלים "לא מצונזרים" והסכנות הטמונות בהם.',
+    readTimeMinutes: 6,
+    lastUpdated: '05/2026',
+    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
+    content: <PlainText>
+      <div className="bg-slate-900 text-slate-100 p-6 rounded-lg mb-6">
+        <h3 className="text-lg font-bold text-red-400 mb-2">אין גבולות, אין חוקים</h3>
+        <p className="leading-relaxed">
+          כשאתם מבקשים מ-ChatGPT "איך מכינים פצצה", הוא יענה: "אני לא יכול לעזור בזה". זה נקרא Alignment (בטיחות). אבל יש עולם מקביל של מודלים "פרוצים" או לא מצונזרים, שבהם הכל מותר. וזה מפחיד ומעניין בו זמנית.
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מה זה מודל "לא מצונזר"?</h3>
+      <p>
+        מודלים כמו Llama של Meta שוחררו כקוד פתוח. מפתחים עצמאיים לקחו את המודלים האלה וביצעו להם תהליך שנקרא "Abliteration" או אימון מחדש כדי להסיר את מנגנוני הבטיחות.
+        מודלים כמו "Dolphin" או "WizardLM-Uncensored" יענו על כל שאלה, כולל קוד זדוני (וירוסים), פורנוגרפיה, והוראות לפעילות לא חוקית.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">למה זה קיים? (הטיעון בעד)</h3>
+      <p>
+        התומכים טוענים לחופש הביטוי. למה שתאגיד ענק יחליט בשבילי מה מוסרי ומה לא? למה שסופר שכותב ספר מתח לא יוכל לשאול את ה-AI איך רוצח מעלים ראיות לצורך העלילה? הם טוענים שהצנזורה של החברות הגדולות היא מוגזמת ופוליטית.
+      </p>
+
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">הסכנות הממשיות</h3>
+      <div className="bg-red-50 p-4 rounded-xl border border-red-200">
+        <ul className="list-disc list-inside space-y-2 text-slate-800">
+          <li><strong>סייבר למתחילים:</strong> כל ילד יכול לבקש "תכתוב לי קוד שגונב סיסמאות מכרום" ולקבל כלי נשק מוכן.</li>
+          <li><strong>פייק ניוז והסתה:</strong> אפשר לייצר מסות של תוכן גזעני או מסית באופן אוטומטי, בלי שום פילטר שיעצור את זה.</li>
+          <li><strong>הונאות:</strong> יצירת מיילים של "פישינג" (דיוג) משכנעים במיוחד.</li>
         </ul>
       </div>
 
-      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">האם זה חוקי?</h3>
+      <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">מה אתם צריכים לדעת?</h3>
       <p>
-        אנחנו נמצאים במערב פרוע. הרגולציה תמיד בפיגור אחרי הטכנולוגיה. כרגע, רוב מה שחברות ה-AI עושות הוא חוקי כי אשרנו את זה ב"תנאי השימוש" (שאיש לא קורא). האחריות לשמור על המידע היא עליכם.
+        המודלים האלה לא נמצאים ב-ChatGPT. צריך להתקין אותם על המחשב האישי (עם כרטיס גרפי חזק) או להשתמש בשירותי ענן מיוחדים.
+        חשוב להכיר בקיומם כדי להבין שההגנות שאנחנו רואים בצ'אט הרגיל הן רק אשליה של ביטחון. הטכנולוגיה ה"רעה" כבר בחוץ, והאתגר של השנים הקרובות יהיה איך להתגונן מפניה.
       </p>
     </PlainText>
   },
