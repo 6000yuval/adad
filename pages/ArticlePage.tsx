@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from 'react';
 import { ARTICLES, CATEGORIES } from '../data/content';
 import { Clock, Calendar, ChevronLeft, User, ArrowRight, Share2 } from 'lucide-react';
 import SEO from '../components/SEO';
 import ArticleCard from '../components/ArticleCard';
+import { useRouter } from '../contexts/RouterContext';
+import GlossaryHighlighter from '../components/GlossaryHighlighter';
 
-const ArticlePage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+interface ArticlePageProps {
+  id: string;
+}
+
+const ArticlePage: React.FC<ArticlePageProps> = ({ id }) => {
+  const { navigate } = useRouter();
   const article = ARTICLES.find(a => a.id === id);
-
-  // Scroll to top when article changes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   if (!article) {
     return (
@@ -20,7 +20,7 @@ const ArticlePage: React.FC = () => {
         <SEO title="מאמר לא נמצא" description="המאמר שחיפשת אינו קיים." />
         <h2 className="text-2xl font-bold text-slate-900 mb-2">המאמר לא נמצא</h2>
         <p className="text-slate-600 mb-6">נראה שהדף שחיפשת לא קיים או הוסר.</p>
-        <Link to="/" className="text-blue-600 hover:underline">חזרה לדף הבית</Link>
+        <button onClick={() => navigate({ name: 'home' })} className="text-blue-600 hover:underline">חזרה לדף הבית</button>
       </div>
     );
   }
@@ -59,11 +59,11 @@ const ArticlePage: React.FC = () => {
           
           {/* Breadcrumbs */}
           <nav className="flex items-center text-sm text-slate-500 mb-8 overflow-x-auto whitespace-nowrap pb-2">
-            <Link to="/" className="hover:text-slate-900">בית</Link>
+            <button onClick={() => navigate({ name: 'home' })} className="hover:text-slate-900">בית</button>
             <ChevronLeft className="w-4 h-4 mx-2 flex-shrink-0 text-slate-300" />
-            <Link to={`/category/${article.categoryId}`} className="hover:text-slate-900">
+            <button onClick={() => navigate({ name: 'category', id: article.categoryId })} className="hover:text-slate-900">
               {category?.title || 'קטגוריה'}
-            </Link>
+            </button>
             <ChevronLeft className="w-4 h-4 mx-2 flex-shrink-0 text-slate-300" />
             <span className="text-slate-900 font-medium truncate">{article.title}</span>
           </nav>
@@ -111,7 +111,9 @@ const ArticlePage: React.FC = () => {
 
           {/* Article Content */}
           <article className="bg-white p-6 md:p-12 rounded-2xl shadow-sm border border-slate-100 prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-700 prose-li:text-slate-700 prose-a:text-blue-600">
-            {article.content}
+            <GlossaryHighlighter>
+              {article.content}
+            </GlossaryHighlighter>
           </article>
 
           {/* CTA */}
@@ -121,13 +123,13 @@ const ArticlePage: React.FC = () => {
               שתפו את הידע עם חברים או המשיכו לקרוא מדריכים נוספים.
             </p>
             <div className="flex justify-center gap-4">
-              <Link 
-                to={`/category/${article.categoryId}`}
+              <button 
+                onClick={() => navigate({ name: 'category', id: article.categoryId })}
                 className="px-6 py-2 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2"
               >
                 לכל המדריכים במדור
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -140,9 +142,9 @@ const ArticlePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl font-bold text-slate-900">עוד מאמרים שיעניינו אותך</h2>
-              <Link to={`/category/${article.categoryId}`} className="text-blue-600 text-sm hover:underline font-medium">
+              <button onClick={() => navigate({ name: 'category', id: article.categoryId })} className="text-blue-600 text-sm hover:underline font-medium">
                 הכל בנושא {category?.title}
-              </Link>
+              </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedArticles.map(relArticle => (

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useSearch } from '../contexts/SearchContext';
 import { ARTICLES, GLOSSARY } from '../data/content';
 import { Search, X, ChevronLeft, Sparkles, BookOpen, AlertCircle, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from '../contexts/RouterContext';
 import Fuse from 'fuse.js';
 import ReactMarkdown from 'react-markdown';
 import { GoogleGenAI } from "@google/genai";
@@ -13,7 +13,7 @@ const SearchModal: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'search' | 'ai'>('search');
   const [aiResponse, setAiResponse] = useState('');
   const [isAiLoading, setIsAiLoading] = useState(false);
-  const navigate = useNavigate();
+  const { navigate } = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Focus input when opened
@@ -46,8 +46,12 @@ const SearchModal: React.FC = () => {
     return fuse.search(query).map(result => result.item).slice(0, 5);
   }, [query, fuse]);
 
-  const handleNavigate = (path: string) => {
-    navigate(path);
+  const handleNavigate = (type: string, id: string) => {
+    if (type === 'glossary') {
+      navigate({ name: 'glossary' });
+    } else {
+      navigate({ name: 'article', id });
+    }
     closeSearch();
   };
 
@@ -198,7 +202,7 @@ const SearchModal: React.FC = () => {
                 searchResults.map((result: any, index) => (
                   <div 
                     key={index}
-                    onClick={() => handleNavigate(result.type === 'glossary' ? '/glossary' : `/article/${result.id}`)}
+                    onClick={() => handleNavigate(result.type, result.id)}
                     className="p-3 hover:bg-slate-50 rounded-lg cursor-pointer group transition-colors border border-transparent hover:border-slate-100"
                   >
                     <div className="flex items-center justify-between mb-1">

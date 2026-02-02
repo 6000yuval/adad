@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Article } from '../types';
 import { Clock, ArrowLeft, Image as ImageIcon } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from '../contexts/RouterContext';
 
 interface ArticleCardProps {
   article: Article;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
-  const navigate = useNavigate();
+  const { navigate } = useRouter();
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   return (
     <div 
-      onClick={() => navigate(`/article/${article.id}`)}
+      onClick={() => navigate({ name: 'article', id: article.id })}
       className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all cursor-pointer group flex flex-col h-full text-right"
     >
       {/* Image Section */}

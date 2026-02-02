@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Brain, Search } from 'lucide-react';
 import { CATEGORIES } from '../data/content';
 import { useSearch } from '../contexts/SearchContext';
+import { Page, useRouter } from '../contexts/RouterContext';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate: (page: Page) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { openSearch } = useSearch();
-  const location = useLocation();
+  const { page } = useRouter();
 
   const closeMenu = () => setIsOpen(false);
-  const isActive = (path: string) => location.pathname === path;
+
+  const handleNav = (target: Page) => {
+    onNavigate(target);
+    closeMenu();
+  };
+
+  const isHome = page.name === 'home';
+  const isGlossary = page.name === 'glossary';
+  const currentCatId = page.name === 'category' ? page.id : null;
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
@@ -19,30 +31,43 @@ const Navbar: React.FC = () => {
           
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center gap-2 group" onClick={closeMenu}>
+            <button 
+              onClick={() => handleNav({ name: 'home' })} 
+              className="flex-shrink-0 flex items-center gap-2 group text-right"
+            >
               <div className="bg-blue-600 p-1.5 rounded-lg text-white group-hover:bg-blue-700 transition-colors">
                 <Brain className="w-6 h-6" />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start">
                 <span className="font-bold text-lg leading-none text-slate-900 group-hover:text-blue-600 transition-colors">AI בעברית</span>
                 <span className="text-[10px] text-slate-500 font-medium">לעבוד נכון עם בינה מלאכותית</span>
               </div>
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex lg:items-center lg:gap-5">
-            <Link to="/" className={`text-sm font-medium hover:text-blue-600 transition-colors ${isActive('/') ? 'text-blue-600' : 'text-slate-600'}`}>
+            <button 
+              onClick={() => handleNav({ name: 'home' })}
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${isHome ? 'text-blue-600' : 'text-slate-600'}`}
+            >
               בית
-            </Link>
+            </button>
             {CATEGORIES.slice(0, 7).map((cat) => (
-              <Link key={cat.id} to={`/category/${cat.id}`} className={`text-sm font-medium hover:text-blue-600 transition-colors ${isActive(`/category/${cat.id}`) ? 'text-blue-600' : 'text-slate-600'}`}>
+              <button 
+                key={cat.id} 
+                onClick={() => handleNav({ name: 'category', id: cat.id })}
+                className={`text-sm font-medium hover:text-blue-600 transition-colors ${currentCatId === cat.id ? 'text-blue-600' : 'text-slate-600'}`}
+              >
                 {cat.title.split(':')[0]}
-              </Link>
+              </button>
             ))}
-            <Link to="/glossary" className={`text-sm font-medium hover:text-blue-600 transition-colors ${isActive('/glossary') ? 'text-blue-600' : 'text-slate-600'}`}>
+            <button 
+              onClick={() => handleNav({ name: 'glossary' })}
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${isGlossary ? 'text-blue-600' : 'text-slate-600'}`}
+            >
               מילון מושגים
-            </Link>
+            </button>
             
             <button onClick={openSearch} className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-md text-slate-500 text-sm transition-colors mr-2 group">
               <Search className="w-4 h-4 text-slate-400 group-hover:text-slate-600" />
@@ -66,13 +91,48 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="lg:hidden bg-white border-b border-slate-200 shadow-lg absolute w-full left-0 top-16 z-40">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-[80vh] overflow-y-auto">
-            <Link to="/" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">בית</Link>
+            <button 
+              onClick={() => handleNav({ name: 'home' })} 
+              className={`block w-full text-right px-3 py-2 rounded-md text-base font-medium ${isHome ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50'}`}
+            >
+              בית
+            </button>
             {CATEGORIES.map((cat) => (
-              <Link key={cat.id} to={`/category/${cat.id}`} onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">
+              <button 
+                key={cat.id} 
+                onClick={() => handleNav({ name: 'category', id: cat.id })} 
+                className={`block w-full text-right px-3 py-2 rounded-md text-base font-medium ${currentCatId === cat.id ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50'}`}
+              >
                 {cat.title}
-              </Link>
+              </button>
             ))}
-            <Link to="/glossary" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">מילון מושגים</Link>
+            <button 
+              onClick={() => handleNav({ name: 'glossary' })} 
+              className={`block w-full text-right px-3 py-2 rounded-md text-base font-medium ${isGlossary ? 'bg-blue-50 text-blue-700' : 'text-slate-700 hover:bg-slate-50'}`}
+            >
+              מילון מושגים
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Categories Strip (Horizontal Scroll) */}
+      {!isOpen && (
+        <div className="lg:hidden overflow-x-auto border-t border-slate-100 bg-white/95 backdrop-blur [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+          <div className="flex items-center px-4 py-2 gap-2 min-w-max">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => handleNav({ name: 'category', id: cat.id })}
+                className={`text-sm px-3 py-1.5 rounded-full transition-all whitespace-nowrap border ${
+                  currentCatId === cat.id
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                }`}
+              >
+                {cat.title.split(':')[0]}
+              </button>
+            ))}
           </div>
         </div>
       )}

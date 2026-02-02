@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { CATEGORIES } from '../data/content';
 import SEO from '../components/SEO';
+import { useRouter } from '../contexts/RouterContext';
 
 const Home: React.FC = () => {
+  const { navigate } = useRouter();
+
   return (
     <div className="flex flex-col">
       <SEO title="דף הבית" description="המדריך המלא והסמכותי לעבודה נכונה עם בינה מלאכותית (AI) בישראל." />
@@ -27,19 +29,19 @@ const Home: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              to="/category/basics" 
+            <button 
+              onClick={() => navigate({ name: 'category', id: 'basics' })}
               className="px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200 flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               התחילו כאן
               <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/category/skills" 
+            </button>
+            <button 
+              onClick={() => navigate({ name: 'category', id: 'skills' })}
               className="px-8 py-4 bg-white text-slate-700 border border-slate-200 font-bold rounded-lg hover:bg-slate-50 transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               שיפור מיומנויות
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -51,9 +53,9 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CATEGORIES.map((category) => (
-              <Link 
+              <button 
                 key={category.id} 
-                to={`/category/${category.id}`}
+                onClick={() => navigate({ name: 'category', id: category.id })}
                 className="group p-6 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all bg-white flex flex-col items-start text-right relative overflow-hidden"
               >
                 {/* Colored accent background */}
@@ -73,7 +75,7 @@ const Home: React.FC = () => {
                 <div className="mt-auto text-blue-600 text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                   למעבר למדור <ArrowLeft className="w-4 h-4" />
                 </div>
-              </Link>
+              </button>
             ))}
           </div>
         </div>

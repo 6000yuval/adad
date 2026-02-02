@@ -1,8 +1,10 @@
 import React from 'react';
 import { CATEGORIES } from '../data/content';
-import { Link } from 'react-router-dom';
+import { useRouter } from '../contexts/RouterContext';
 
 const Footer: React.FC = () => {
+  const { navigate } = useRouter();
+
   return (
     <footer className="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,15 +22,15 @@ const Footer: React.FC = () => {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               {CATEGORIES.map(cat => (
                 <li key={cat.id}>
-                  <Link to={`/category/${cat.id}`} className="hover:text-blue-400 transition-colors">
+                  <button onClick={() => navigate({ name: 'category', id: cat.id })} className="hover:text-blue-400 transition-colors text-right">
                     {cat.title}
-                  </Link>
+                  </button>
                 </li>
               ))}
               <li>
-                <Link to="/glossary" className="hover:text-blue-400 transition-colors">
+                <button onClick={() => navigate({ name: 'glossary' })} className="hover:text-blue-400 transition-colors">
                   מילון מושגים
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

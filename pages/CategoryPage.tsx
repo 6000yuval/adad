@@ -1,12 +1,16 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
 import { ARTICLES, CATEGORIES } from '../data/content';
 import ArticleCard from '../components/ArticleCard';
 import { ChevronLeft } from 'lucide-react';
 import SEO from '../components/SEO';
+import { useRouter } from '../contexts/RouterContext';
 
-const CategoryPage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+interface CategoryPageProps {
+  id: string;
+}
+
+const CategoryPage: React.FC<CategoryPageProps> = ({ id }) => {
+  const { navigate } = useRouter();
   const category = CATEGORIES.find(c => c.id === id);
   const categoryArticles = ARTICLES.filter(a => a.categoryId === id);
 
@@ -15,7 +19,7 @@ const CategoryPage: React.FC = () => {
       <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
         <SEO title="מדור לא נמצא" description="המדור שחיפשת אינו קיים." />
         <h2 className="text-2xl font-bold text-slate-900 mb-2">המדור לא נמצא</h2>
-        <Link to="/" className="text-blue-600 hover:underline">חזרה לדף הבית</Link>
+        <button onClick={() => navigate({ name: 'home' })} className="text-blue-600 hover:underline">חזרה לדף הבית</button>
       </div>
     );
   }
@@ -28,7 +32,7 @@ const CategoryPage: React.FC = () => {
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <nav className="flex items-center text-sm text-slate-500 mb-6">
-            <Link to="/" className="hover:text-slate-900">בית</Link>
+            <button onClick={() => navigate({ name: 'home' })} className="hover:text-slate-900">בית</button>
             <ChevronLeft className="w-4 h-4 mx-2 text-slate-300" />
             <span className="text-slate-900 font-medium">{category.title}</span>
           </nav>
